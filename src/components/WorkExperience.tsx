@@ -210,7 +210,7 @@ const Item: React.FC<ItemProps> = ({ item, index }) => {
 
 function Experience() {
   return (
-    <section className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-white">
+    <section id="experience" className="relative py-16 sm:py-24 md:py-32 overflow-hidden bg-white">
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

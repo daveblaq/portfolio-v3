@@ -59,7 +59,7 @@ export default function About() {
           
           {/* Left: Text Content */}
           <div ref={textRef} className="space-y-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black leading-[1.15] text-slate-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.25] text-slate-900">
               Bridging the gap between <span className="text-primary-600">Software</span> and <span className="text-primary-500">Intelligence</span>
             </h2>
             <div className="space-y-6">

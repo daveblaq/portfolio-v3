@@ -147,7 +147,7 @@ export default function AIShowcase() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black leading-[1.15] mb-4 sm:mb-6 text-slate-900">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold leading-[1.15] mb-4 sm:mb-6 text-slate-900">
                 Automate the <span className="text-primary-500">Mundane</span>, Unlock the <span className="text-primary-600">Future</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed">

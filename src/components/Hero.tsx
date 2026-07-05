@@ -34,14 +34,14 @@ export default function Hero() {
       }
 
       // Animate the tray sliding up
-      gsap.fromTo(
-        trayRef.current,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: "back.out(1.5)", delay: 0.2 }
-      );
-      
-      // Animate icons popping in
       if (trayRef.current) {
+        gsap.fromTo(
+          trayRef.current,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "back.out(1.5)", delay: 0.2 }
+        );
+        
+        // Animate icons popping in
         gsap.fromTo(
           trayRef.current.children,
           { scale: 0, opacity: 0, y: 20 },
@@ -55,7 +55,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100svh] md:min-h-[1000px] md:h-auto flex flex-col overflow-hidden pt-20"
+      className="relative min-h-[100svh] md:min-h-[1000px] lg:min-h-[1000px] md:h-auto flex flex-col overflow-hidden pt-20"
     >
       {/* Background Image Container - Paste your image link in the url('') below */}
       <div 
@@ -100,7 +100,7 @@ export default function Hero() {
           </motion.h2>
           <motion.h1 
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } } }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black leading-[1.15] mb-4 sm:mb-6 text-slate-900"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.25] mb-4 sm:mb-6 text-slate-900"
           >
             Crafting exceptional digital experiences with modern technologies
           </motion.h1>
@@ -135,11 +135,11 @@ export default function Hero() {
         <div className="hidden md:block w-full md:w-1/2"></div>
       </div>
 
-      {/* Bottom Tray / Dock */}
-      <div className="absolute bottom-6 sm:bottom-8 left-0 right-0 flex justify-center px-4 w-full z-20">
+      {/* Bottom Tray / Dock (Desktop) */}
+      <div className="hidden md:flex absolute bottom-8 left-0 right-0 justify-center px-4 w-full z-20">
         <div 
           ref={trayRef}
-          className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 rounded-[24px] sm:rounded-[32px] bg-black/10 backdrop-blur-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-x-auto max-w-full"
+          className="flex items-center gap-4 p-3 rounded-[32px] bg-black/10 backdrop-blur-[40px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-visible"
         >
           {TRAY_ICONS.map((icon) => (
             <div 
@@ -149,21 +149,29 @@ export default function Hero() {
               {/* Mac-like Tooltip on hover */}
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-neutral-800 text-white text-xs font-medium rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-lg">
                 {icon.name}
-                {/* Tooltip arrow */}
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-neutral-800 rotate-45"></div>
               </div>
               
               {/* Icon Container */}
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:-translate-y-3 group-hover:scale-110">
-                {icon.image ? (
-                  <img src={icon.image} alt={icon.name} className="w-full h-full object-contain drop-shadow-md" />
-                ) : (
-                  <div className="w-full h-full bg-neutral-100 rounded-xl flex items-center justify-center shadow-sm">
-                    <span className="text-[10px] text-neutral-400 font-medium uppercase tracking-wider">img</span>
-                  </div>
-                )}
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:-translate-y-3 group-hover:scale-110">
+                <img src={icon.image} alt={icon.name} className="w-full h-full object-contain drop-shadow-md" />
               </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Marquee (Mobile) */}
+      <div className="block md:hidden absolute bottom-0 left-0 right-0 w-full z-20 overflow-hidden bg-black/15 backdrop-blur-[30px] border-t border-white/5 py-4">
+        <div className="flex w-max gap-8 animate-marquee">
+          {/* Double list of icons for infinite seamless scroll loop */}
+          {[...TRAY_ICONS, ...TRAY_ICONS].map((icon, index) => (
+            <div 
+              key={`${icon.id}-marquee-${index}`}
+              className="w-10 h-10 flex-shrink-0"
+            >
+              <img src={icon.image} alt={icon.name} className="w-full h-full object-contain" />
+-            </div>
           ))}
         </div>
       </div>

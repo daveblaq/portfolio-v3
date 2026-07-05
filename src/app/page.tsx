@@ -20,19 +20,21 @@ export default function Home() {
     <>
       <Preloader onComplete={() => setIsLoading(false)} />
       {!isLoading && (
-        <SmoothScroll>
-          <main className="flex min-h-screen flex-col bg-background text-foreground selection:bg-primary/30 animate-fade-in">
-            <NavBar />
-            <Hero />
-            <About />
-            <Projects />
-            <AIShowcase />
-            <WorkExperience />
-            <EducationSkills />
-            <Contact />
-            <Footer />
-          </main>
-        </SmoothScroll>
+        <>
+          <NavBar />
+          <SmoothScroll>
+            <main className="flex min-h-screen flex-col bg-background text-foreground selection:bg-primary/30 animate-fade-in">
+              <Hero />
+              <About />
+              <Projects />
+              <AIShowcase />
+              <WorkExperience />
+              <EducationSkills />
+              <Contact />
+              <Footer />
+            </main>
+          </SmoothScroll>
+        </>
       )}
     </>
   );

@@ -44,7 +44,7 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 
 const navLinks = [
   { name: "About", href: "#about" },
-  { name: "Expertise", href: "#expertise" },
+  { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "AI Showcase", href: "#ai-showcase" },
 ];
@@ -139,10 +139,10 @@ export default function NavBar() {
               </Link>
             ))}
             <div className="flex items-center gap-6 mt-2 pt-6 border-t border-slate-200">
-              <Link href="https://github.com" target="_blank" className="text-slate-500 hover:text-primary-500">
+              <Link href="https://github.com/daveblaq" target="_blank" className="text-slate-500 hover:text-primary-500">
                 <GithubIcon className="w-6 h-6" />
               </Link>
-              <Link href="https://linkedin.com" target="_blank" className="text-slate-500 hover:text-primary-500">
+              <Link href="https://www.linkedin.com/in/david-oladele-b4ab85223/" target="_blank" className="text-slate-500 hover:text-primary-500">
                 <LinkedinIcon className="w-6 h-6" />
               </Link>
             </div>
