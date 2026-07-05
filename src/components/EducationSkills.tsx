@@ -51,14 +51,6 @@ export default function EducationSkills() {
 
   return (
     <section className="py-16 sm:py-24 relative overflow-hidden bg-white transition-colors duration-300">
-      {/* Vintage Warmth Overlay */}
-      <div className="absolute inset-0 z-[0] pointer-events-none bg-[#f3e9d2] mix-blend-multiply opacity-40" />
-      
-      {/* Crispy Noise Overlay */}
-      <div 
-        className="absolute inset-0 z-[0] pointer-events-none opacity-[0.3] mix-blend-overlay"
-        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
-      />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

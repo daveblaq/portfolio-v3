@@ -6,7 +6,6 @@ import Hero from "@/components/Hero";
 import WorkExperience from "@/components/WorkExperience";
 import EducationSkills from "@/components/EducationSkills";
 import About from "@/components/About";
-import Expertise from "@/components/Expertise";
 import Projects from "@/components/Projects";
 import AIShowcase from "@/components/AIShowcase";
 import Contact from "@/components/Contact";
@@ -26,10 +25,10 @@ export default function Home() {
             <NavBar />
             <Hero />
             <About />
-            <WorkExperience />
-            <EducationSkills />
             <Projects />
             <AIShowcase />
+            <WorkExperience />
+            <EducationSkills />
             <Contact />
             <Footer />
           </main>
