@@ -64,10 +64,9 @@ export default function Hero() {
       />
 
       {/* Main Content Area - Headshot Background */}
-      <div className="absolute top-0 right-0 w-full h-full md:w-1/2 z-10 overflow-hidden pointer-events-none opacity-40 md:opacity-100">
+      <div className="hidden md:block absolute top-0 right-0 w-full h-full md:w-1/2 z-10 overflow-hidden pointer-events-none">
         {/* Gradient fade to blend the image with the white background smoothly */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10 hidden md:block" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10 md:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10" />
         
         {/* Replace this src with your actual headshot image URL or import */}
         <img 
@@ -79,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Foreground Text Content */}
-      <div className="relative z-[18] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col md:flex-row items-start md:items-center pt-6 sm:pt-10 pb-32">
+      <div className="relative z-[18] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start pt-12 pb-44 md:pb-32">
         {/* Left Side Text */}
         <motion.div 
           className="w-full md:w-1/2 flex flex-col justify-center md:pr-8 lg:pr-16 md:pt-10 lg:pt-14 pt-4"
