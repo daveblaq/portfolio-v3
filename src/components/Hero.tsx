@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Foreground Text Content */}
-      <div className="relative z-[18] w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start pt-12 pb-44 md:pb-32">
+      <div className="relative z-[18] w-full container mx-auto px-4 sm:px-6 md:px-12 flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start pt-12 pb-44 md:pb-32">
         {/* Left Side Text */}
         <motion.div 
           className="w-full md:w-1/2 flex flex-col justify-center md:pr-8 lg:pr-16 md:pt-10 lg:pt-14 pt-4"
