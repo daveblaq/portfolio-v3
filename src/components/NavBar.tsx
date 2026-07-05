@@ -76,7 +76,7 @@ export default function NavBar() {
           <img
             src="https://ik.imagekit.io/shiga/portfolio-v3/IMG_20260101_172343_212%20(2).webp"
             alt="David Oladele"
-            className="w-8 h-8 rounded-full object-cover border border-slate-200"
+            className="w-8 h-8 rounded-full object-cover border border-slate-200 pointer-events-none"
           />
           <span><span className="text-primary-500">David</span> Oladele</span>
         </Link>

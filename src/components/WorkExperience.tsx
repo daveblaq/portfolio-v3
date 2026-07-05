@@ -108,7 +108,7 @@ const Item: React.FC<ItemProps> = ({ item, index }) => {
             <img
               src={item?.image?.src || item?.image}
               alt={item?.company}
-              className="w-10 h-10 sm:w-8 sm:h-8 object-cover rounded-lg"
+              className="w-10 h-10 sm:w-8 sm:h-8 object-cover rounded-lg pointer-events-none"
             />
           </motion.div>
           {item?.status === 1 && (

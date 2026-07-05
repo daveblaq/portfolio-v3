@@ -215,7 +215,7 @@ export default function Projects() {
                   <img
                     src={app.icon}
                     alt={app.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover pointer-events-none"
                   />
                 </motion.div>
                 <span className="text-slate-700 font-bold text-sm tracking-wide">{app.name}</span>
@@ -272,7 +272,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.text}
-                  className="max-w-full max-h-full object-contain group-hover:scale-102 transition-transform duration-700"
+                  className="max-w-full max-h-full object-contain group-hover:scale-102 transition-transform duration-700 pointer-events-none"
                 />
               </div>
             </motion.div>

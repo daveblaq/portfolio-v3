@@ -91,7 +91,7 @@ export default function EducationSkills() {
                 <div key={edu.id} className="flex gap-4 items-start">
                   {/* Icon/Logo container */}
                   <div className="w-14 h-14 shrink-0 flex items-center justify-center relative overflow-hidden">
-                    <img src="https://ik.imagekit.io/shiga/portfolio-v3/images__1_-removebg-preview.png" alt={edu.institution} className="w-full h-full object-contain p-1" />
+                    <img src="https://ik.imagekit.io/shiga/portfolio-v3/images__1_-removebg-preview.png" alt={edu.institution} className="w-full h-full object-contain p-1 pointer-events-none" />
                   </div>
                   {/* Text details */}
                   <div className="flex flex-col">

@@ -112,7 +112,7 @@ export default function AIShowcase() {
                   <img 
                     src={tool.logo || `https://ui-avatars.com/api/?name=${tool.name}&background=f8fafc&color=94a3b8&font-size=0.33`} 
                     alt={tool.name} 
-                    className="w-full h-full object-contain group-hover:opacity-80 transition-opacity"
+                    className="w-full h-full object-contain group-hover:opacity-80 transition-opacity pointer-events-none"
                   />
                 </motion.div>
               </div>
@@ -166,7 +166,7 @@ export default function AIShowcase() {
                   className="flex gap-3 sm:gap-4 group bg-white/60 backdrop-blur-lg p-4 sm:p-6 lg:p-6 rounded-2xl sm:rounded-[2rem] border border-white/40 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="mt-1 group-hover:scale-105 transition-transform h-fit shrink-0">
-                    <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain" />
+                    <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain pointer-events-none" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h4>

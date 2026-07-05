@@ -92,14 +92,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[9999] flex flex-col justify-between bg-[#080808] p-8 sm:p-16 select-none pointer-events-auto"
+      className="fixed inset-0 z-[98] flex flex-col justify-between bg-[#FAF9F6] p-8 sm:p-16 select-none pointer-events-auto"
     >
       {/* Top Header */}
       <div className="flex justify-between items-center">
-        <span className="text-xs tracking-[0.2em] font-bold text-slate-500 uppercase">
+        <span className="text-xs tracking-[0.2em] font-bold text-slate-400 uppercase">
           Portfolio v3 / Intro
         </span>
-        <span className="text-xs tracking-[0.2em] font-bold text-slate-500 uppercase">
+        <span className="text-xs tracking-[0.2em] font-bold text-slate-400 uppercase">
           © {new Date().getFullYear()}
         </span>
       </div>
@@ -109,14 +109,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         {/* Word Reveal */}
         <div ref={textContainerRef} className="overflow-hidden h-14 sm:h-20 flex items-center">
           <span 
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white transition-all duration-300 ease-out"
+            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-900 transition-all duration-300 ease-out"
           >
             {words[currentWordIndex]}
           </span>
         </div>
         
         {/* Progress Line */}
-        <div className="w-full h-[2px] bg-slate-800 relative overflow-hidden">
+        <div className="w-full h-[2px] bg-slate-200 relative overflow-hidden">
           <div 
             ref={lineRef} 
             className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-500 to-primary-600 origin-left"
@@ -127,7 +127,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
       {/* Bottom Counter */}
       <div className="flex justify-between items-end">
         <div className="flex flex-col">
-          <span className="text-xs tracking-[0.1em] font-semibold text-slate-600 uppercase mb-1">
+          <span className="text-xs tracking-[0.1em] font-semibold text-slate-400 uppercase mb-1">
             Status
           </span>
           <span className="text-sm font-bold text-primary-500 uppercase tracking-widest animate-pulse">
@@ -137,7 +137,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         
         {/* Visual Counter */}
         <div ref={counterRef} className="overflow-hidden">
-          <span className="text-[12vw] sm:text-[8vw] font-black leading-none text-white font-mono tracking-tighter block">
+          <span className="text-[12vw] sm:text-[8vw] font-black leading-none text-slate-900 font-mono tracking-tighter block">
             {count.toString().padStart(3, "0")}
           </span>
         </div>

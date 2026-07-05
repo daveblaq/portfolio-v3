@@ -73,7 +73,7 @@ export default function Hero() {
           ref={imageRef}
           src="https://ik.imagekit.io/shiga/portfolio-v3/1782234595366%20(2).png" 
           alt="My Headshot" 
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-right pointer-events-none"
         />
       </div>
 
@@ -154,7 +154,7 @@ export default function Hero() {
               
               {/* Icon Container */}
               <div className="w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:-translate-y-3 group-hover:scale-110">
-                <img src={icon.image} alt={icon.name} className="w-full h-full object-contain drop-shadow-md" />
+                <img src={icon.image} alt={icon.name} className="w-full h-full object-contain drop-shadow-md pointer-events-none" />
               </div>
             </div>
           ))}
@@ -170,8 +170,8 @@ export default function Hero() {
               key={`${icon.id}-marquee-${index}`}
               className="w-10 h-10 flex-shrink-0"
             >
-              <img src={icon.image} alt={icon.name} className="w-full h-full object-contain" />
--            </div>
+              <img src={icon.image} alt={icon.name} className="w-full h-full object-contain pointer-events-none" />
+            </div>
           ))}
         </div>
       </div>

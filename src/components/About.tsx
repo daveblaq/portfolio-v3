@@ -77,7 +77,7 @@ export default function About() {
             <div className="bg-white/60 backdrop-blur-lg border border-white/40 p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex items-start gap-4 sm:gap-6 hover:-translate-y-1 transition-transform duration-300">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl shrink-0 overflow-hidden flex items-center justify-center">
                 {/* Placeholder for Full-Stack Dev Image */}
-                <img src="https://ik.imagekit.io/shiga/portfolio-v3/pngwing.com.png" alt="Full-Stack Dev" className="w-full h-full object-cover" />
+                <img src="https://ik.imagekit.io/shiga/portfolio-v3/pngwing.com.png" alt="Full-Stack Dev" className="w-full h-full object-cover pointer-events-none" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Full-Stack Dev</h3>
@@ -88,7 +88,7 @@ export default function About() {
             <div className="bg-white/60 backdrop-blur-lg border border-white/40 p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex items-start gap-4 sm:gap-6 hover:-translate-y-1 transition-transform duration-300">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl shrink-0 overflow-hidden flex items-center justify-center">
                 {/* Placeholder for AI Automation Image */}
-                <img src="https://ik.imagekit.io/shiga/portfolio-v3/Screenshot_2026-07-05_at_19.13.10-removebg-preview.png" alt="AI Automation" className="w-full h-full object-cover" />
+                <img src="https://ik.imagekit.io/shiga/portfolio-v3/Screenshot_2026-07-05_at_19.13.10-removebg-preview.png" alt="AI Automation" className="w-full h-full object-cover pointer-events-none" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">AI Automation</h3>
@@ -99,7 +99,7 @@ export default function About() {
             <div className="bg-white/60 backdrop-blur-lg border border-white/40 p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex items-start gap-4 sm:gap-6 hover:-translate-y-1 transition-transform duration-300">
               <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl shrink-0 overflow-hidden flex items-center justify-center">
                 {/* Placeholder for Systems Architecture Image */}
-                <img src="https://ik.imagekit.io/shiga/portfolio-v3/pngwing.com%20(1).png" alt="Systems Architecture" className="w-full h-full object-cover" />
+                <img src="https://ik.imagekit.io/shiga/portfolio-v3/pngwing.com%20(1).png" alt="Systems Architecture" className="w-full h-full object-cover pointer-events-none" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Systems Architecture</h3>
