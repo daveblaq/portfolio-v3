@@ -65,7 +65,7 @@ export default function EducationSkills() {
           <div className="inline-flex items-center px-4 py-2 rounded-full border text-sm font-medium mb-6 bg-primary-50 border-primary-200 text-primary-700">
             Background & Expertise
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 text-slate-900">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-[42px] font-bold leading-[1.25] mb-4 sm:mb-6 text-slate-900">
             Education & Skills
           </h2>
         </motion.div>

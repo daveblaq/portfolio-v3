@@ -237,7 +237,7 @@ function Experience() {
             </svg>
             Professional Journey
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black leading-[1.15] text-slate-900 mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.25] text-slate-900 mb-4 sm:mb-6">
             Work Experience
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed max-w-3xl mx-auto">
@@ -305,7 +305,7 @@ function Experience() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/about-me"
+                  href="https://www.linkedin.com/in/david-oladele-b4ab85223/"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 font-bold rounded-xl transition-colors border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50"
                 >
                   Learn More About Me

@@ -99,15 +99,21 @@ export default function AIShowcase() {
             ].map((tool, i) => (
               <div
                 key={tool.name}
-                className="absolute z-10"
+                className="absolute z-10 group cursor-pointer"
                 style={{ left: tool.x, top: tool.y, transform: "translate(-50%, -50%)" }}
               >
+                {/* Tooltip on hover */}
+                <div className="absolute -top-14 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-slate-900 text-white text-xs font-semibold rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-xl border border-white/10 scale-95 group-hover:scale-100 z-30">
+                  {tool.name}
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900 rotate-45 border-r border-b border-white/10"></div>
+                </div>
+
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ type: "spring", delay: 0.8 + i * 0.1 }}
-                  className="backdrop-blur-md w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl cursor-pointer hover:scale-110 hover:border-primary-300 transition-all duration-300 group flex items-center justify-center overflow-hidden"
+                  className="backdrop-blur-md w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl hover:scale-110 hover:border-primary-300 transition-all duration-300 flex items-center justify-center overflow-hidden"
                 >
                   <img 
                     src={tool.logo || `https://ui-avatars.com/api/?name=${tool.name}&background=f8fafc&color=94a3b8&font-size=0.33`} 
@@ -147,7 +153,7 @@ export default function AIShowcase() {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold leading-[1.15] mb-4 sm:mb-6 text-slate-900">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.15] mb-4 sm:mb-6 text-slate-900">
                 Automate the <span className="text-primary-500">Mundane</span>, Unlock the <span className="text-primary-600">Future</span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed">
