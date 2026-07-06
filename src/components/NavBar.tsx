@@ -96,10 +96,10 @@ export default function NavBar() {
 
         {/* Socials / CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="https://github.com" target="_blank" className="text-slate-500 hover:text-primary-500 transition-colors">
+          <Link href="https://github.com/daveblaq" target="_blank" className="text-slate-500 hover:text-primary-500 transition-colors">
             <GithubIcon className="w-5 h-5" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" className="text-slate-500 hover:text-primary-500 transition-colors">
+          <Link href="https://www.linkedin.com/in/david-oladele-b4ab85223/" target="_blank" className="text-slate-500 hover:text-primary-500 transition-colors">
             <LinkedinIcon className="w-5 h-5" />
           </Link>
           <Link
