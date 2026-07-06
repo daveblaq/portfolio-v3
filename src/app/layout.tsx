@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "David Oladele" }],
   creator: "David Oladele",
-  metadataBase: new URL("https://davidoladele.dev"),
+  metadataBase: new URL("https://https://www.oladeledavid.xyz"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://davidoladele.dev",
+    url: "https://https://www.oladeledavid.xyz",
     siteName: "David Oladele",
     title: "David Oladele — Software Engineer & AI Automation Expert",
     description:
@@ -90,9 +90,9 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground flex flex-col selection:bg-primary/30 relative">
         {/* Global Vintage Warmth Overlay */}
         <div className="fixed inset-0 z-[99] pointer-events-none bg-[#f3e9d2] mix-blend-multiply opacity-45" />
-        
+
         {/* Global Crispy Noise Overlay */}
-        <div 
+        <div
           className="fixed inset-0 z-[99] pointer-events-none opacity-[0.3] mix-blend-overlay"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
         />

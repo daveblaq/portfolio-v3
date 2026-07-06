@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://davidoladele.dev/sitemap.xml",
+    sitemap: "https://https://www.oladeledavid.xyz/sitemap.xml",
   };
 }
