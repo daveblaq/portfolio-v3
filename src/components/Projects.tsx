@@ -142,7 +142,7 @@ export const webprojects = [
     image: portfolio,
     description: "A highly immersive, texturized interactive portfolio designed with GSAP smooth scrolling to feature software engineering and AI capabilities.",
     stack: ["React", "Typescript", "Tailwind CSS"],
-    github: null,
+    github: "https://github.com/daveblaq/portfolio-v3",
   },
   {
     id: 12,
