@@ -32,8 +32,46 @@ export default function AIShowcase() {
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         <div className="flex flex-col gap-10 sm:gap-16 md:gap-24">
-          
-          {/* Top: AI Canvas */}
+            {/* Top: Text & Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.15] mb-4 sm:mb-6 text-slate-900">
+                Automate the <span className="text-primary-500">Mundane</span>, Unlock the <span className="text-primary-600">Future</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed">
+                In today's fast-paced landscape, efficiency isn't just an advantage—it's a requirement. By leveraging cutting-edge LLMs and custom automation pipelines, I help businesses reduce operational overhead and focus on high-impact work.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 text-left">
+              {features.map((feature, index) => (
+                <motion.div 
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  className="flex gap-3 sm:gap-4 group bg-white/60 backdrop-blur-lg p-4 sm:p-6 lg:p-6 rounded-2xl sm:rounded-[2rem] border border-white/40 transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="mt-1 group-hover:scale-105 transition-transform h-fit shrink-0">
+                    <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain pointer-events-none" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h4>
+                    <p className="text-slate-700 font-medium leading-relaxed">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Bottom: AI Canvas */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -144,45 +182,7 @@ export default function AIShowcase() {
             </div>
           </motion.div>
 
-          {/* Bottom: Text & Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold leading-[1.15] mb-4 sm:mb-6 text-slate-900">
-                Automate the <span className="text-primary-500">Mundane</span>, Unlock the <span className="text-primary-600">Future</span>
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed">
-                In today's fast-paced landscape, efficiency isn't just an advantage—it's a requirement. By leveraging cutting-edge LLMs and custom automation pipelines, I help businesses reduce operational overhead and focus on high-impact work.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 text-left">
-              {features.map((feature, index) => (
-                <motion.div 
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex gap-3 sm:gap-4 group bg-white/60 backdrop-blur-lg p-4 sm:p-6 lg:p-6 rounded-2xl sm:rounded-[2rem] border border-white/40 transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="mt-1 group-hover:scale-105 transition-transform h-fit shrink-0">
-                    <img src={feature.icon} alt={feature.title} className="w-12 h-12 object-contain pointer-events-none" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h4>
-                    <p className="text-slate-700 font-medium leading-relaxed">{feature.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
+        
         </div>
       </div>
     </section>
