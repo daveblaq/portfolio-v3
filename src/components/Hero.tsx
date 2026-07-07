@@ -64,17 +64,21 @@ export default function Hero() {
       />
 
       {/* Main Content Area - Headshot Background */}
-      <div className="hidden md:block absolute top-0 right-0 w-full h-full md:w-1/2 z-10 overflow-hidden pointer-events-none">
-        {/* Gradient fade to blend the image with the white background smoothly */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10" />
-        
-        {/* Replace this src with your actual headshot image URL or import */}
-        <img 
-          ref={imageRef}
-          src="https://ik.imagekit.io/shiga/portfolio-v3/1782234595366%20(2).png" 
-          alt="My Headshot" 
-          className="w-full h-full object-cover object-right pointer-events-none"
-        />
+      <div className="hidden md:block absolute inset-0 w-full h-full z-10 overflow-hidden pointer-events-none">
+        <div className="container mx-auto relative h-full">
+          <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
+            {/* Gradient fade to blend the image with the white background smoothly */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent z-10" />
+            
+            {/* Replace this src with your actual headshot image URL or import */}
+            <img 
+              ref={imageRef}
+              src="https://ik.imagekit.io/shiga/portfolio-v3/1782234595366%20(2).png" 
+              alt="My Headshot" 
+              className="w-full h-full object-cover object-right pointer-events-none"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Foreground Text Content */}
